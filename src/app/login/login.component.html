@@ -1,0 +1,83 @@
+<header>
+    <div class="header-area ">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid ">
+                <div class="header_bottom_border">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<div class="bradcam_area bradcam_bg_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text">
+                    <h3>Scopic Auction Test</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="whole-wrap">
+    <div class="container box_1170">
+        <div class="section-top-border">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <h3 class="mb-30">Please login using your email and password</h3>
+                    <p>Dummy users (email/password):</p>
+                    <div class="row"> 
+                        <ol>
+                            <li>admin@admin.com + admin123456</li>
+                            <li>user1@mail.com + 123456</li>
+                            <li>user2@mail.com + 098765</li>
+                        </ol>
+                    </div>
+                    <form>
+                        <p *ngIf="isUsernamePasswordInvalid()" style="color:red">Username/password is invalid</p>
+                        <div class="mt-10">
+                            <input type="email" id="username" name="username" placeholder="Email" [(ngModel)]="username" required class="single-input">
+                            <p *ngIf="isUsernameEmpty()" style="color:red">Username is required to login</p>
+                        </div>
+                        <div class="mt-10">
+                            <input type="password" id="password" name="password" placeholder="Password" [(ngModel)]="password" required class="single-input">
+                            <p *ngIf="isPasswordEmpty()" style="color:red">Password is required to login</p>
+                        </div>
+                        <div class="row">
+                            <div style="margin-top: 16px;" class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="Appointment">
+                                    <div class="d-none d-lg-block">
+                                        <a class="boxed-btn3" (click)="verifyUser()">Log in</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
